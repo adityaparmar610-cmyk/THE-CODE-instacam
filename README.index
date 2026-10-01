@@ -1,0 +1,32 @@
+# InstaCamTool
+
+A tiny Flask app that lets you generate a link.  
+Anyone who opens the link will be asked for camera access, take a photo, and the photo is sent back to you.
+
+## Features
+
+- **One‑click link generation** (via home page)
+- **HTTPS only** – works on any modern browser
+- **Camera access** (front/back)
+- **Photo upload** (saved locally, could be sent by email or stored in DB)
+- **Optional redirect** to Instagram (or any URL)
+
+## Deployment
+
+The app is ready to be deployed on Render, Heroku, Fly.io, or any VPS.
+
+### Render (free)
+
+1. Create a free Render account.  
+2. Click **New** → **Web Service** → **Connect a Git repo** → **Choose** the repo containing this project.  
+3. Set **Build Command**: `pip install -r requirements.txt`  
+4. Set **Start Command**: `python app.py`  
+5. Click **Create Web Service**.  
+6. Once deployed, you’ll get a URL like `https://instacamtool.onrender.com`.  
+7. Visit that URL, copy the generated link, and share it.
+
+### Heroku (free dyno)
+
+```bash
+heroku create instacamtool
+git push heroku main
